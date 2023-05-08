@@ -13,5 +13,5 @@ Note: all system calls are non-atomic and are prefixed with **w**, which disting
 To compile: **gcc -shared -fPIC wdup.c wreadv_wwritev.c -o libwl.so** (Makefile will be added in the future)
 
 Follow the procedure described in  https://github.com/shega1992/memory-allocator (***'How to use this allocator?'*** section).
-# Tests directory
+## Tests directory
 I attach a primitive program to each system call to test it.
