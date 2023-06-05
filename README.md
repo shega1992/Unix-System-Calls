@@ -15,7 +15,7 @@ Basically I used an approach that I had previously used in https://github.com/sh
 
 Note: all system calls are non-atomic and are prefixed with **w**, which distinguishes them from standard Unix versions. Library functions are also prefixed with **w**.
 ## How to use these system calls?
-To compile: **gcc -shared -fPIC wdup.c wreadv_wwritev.c wenv.c wgetpwnam.c -o libwl.so** (Makefile will be added in the future)
+To compile: **make all**
 
 Follow the procedure described in  https://github.com/shega1992/memory-allocator (***'How to use this allocator?'*** section).
 ## Tests directory
