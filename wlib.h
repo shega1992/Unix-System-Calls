@@ -12,4 +12,5 @@ ssize_t wwritev(int fd, const struct w_buf * v, int vcnt);
 int wsetenv(const char * name, const char * value, int overwrite);
 int wunsetenv(const char * name);
 struct passwd * wgetpwnam(const char * name);
+char * wrealpath(const char * pathname, char * resolved_path);
 
