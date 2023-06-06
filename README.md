@@ -22,5 +22,7 @@ Follow the procedure described in  https://github.com/shega1992/memory-allocator
 ## Tests directory
 I attach a primitive program to each system call and library function to test it.
 ## Footnotes
-From **valgrind**'s point of view, the combination of the **wsetenv** and **wunsetenv** functions obviously leads to a memory leak. The logical solution would be to implement memory freeing in **wunsetenv**. 
-This would probably complicate the source code. In addition, forcing the programmer to use **wunsetenv** after **wsetenv** every time in order to avoid memory leaks is a bad idea. Ultimately, all of the program’s space is given back to the system when the process terminates.
+1)From **valgrind**'s point of view, the combination of the **wsetenv** and **wunsetenv** functions obviously leads to a memory leak. The logical solution would be to implement memory freeing in **wunsetenv**. This would probably complicate the source code. In addition, forcing the programmer to use **wunsetenv** after **wsetenv** every time in order to avoid memory leaks is a bad idea. Ultimately, all of the program’s space is given back to the system when the process terminates.
+
+2)I used the **-fno-stack-protector** option when compiling **wgetcwd.c** in order to avoid the **stack smashing detected** error. This error occurs when allocating an array of insufficient size to store the absolute path of the current working directory.
+
