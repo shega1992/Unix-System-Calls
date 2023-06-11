@@ -14,4 +14,5 @@ int wunsetenv(const char * name);
 struct passwd * wgetpwnam(const char * name);
 char * wrealpath(const char * pathname, char * resolved_path);
 char * wgetcwd(char * buf, size_t size);
+int wsiginterrupt(int sig, int flag);
 

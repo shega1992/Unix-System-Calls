@@ -1,4 +1,4 @@
-SOURCES = wdup.c wreadv_wwritev.c wenv.c wgetpwnam.c wrealpath.c
+SOURCES = wdup.c wreadv_wwritev.c wenv.c wgetpwnam.c wrealpath.c wsiginterrupt.c
 
 all: wgetcwd.o
 	gcc -shared -fPIC ${SOURCES} wgetcwd.o -o libwl.so
